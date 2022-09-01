@@ -19,9 +19,10 @@ const Profile = ({ profile }) => {
 };
 
 export const getServerSideProps = async (pageCotext) => {
-  const response = await fetch(`${process.env.NEXT_API_URL}/profile`);
+  const response = await fetch(
+    `https://next-news-ten-dusky.vercel.app/api/profile`
+  );
   const profile = await response.json();
-  console.log(profile);
   return {
     props: {
       profile,
