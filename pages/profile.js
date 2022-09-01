@@ -19,7 +19,7 @@ const Profile = ({ profile }) => {
 };
 
 export const getServerSideProps = async (pageCotext) => {
-  const response = await fetch(`${process.env.SITE_URL}/api/profile`);
+  const response = await fetch(`${process.env.API_URL}/profile`);
   const profile = await response.json();
   console.log(profile);
   return {
